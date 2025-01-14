@@ -3,63 +3,164 @@
 <head>
     <title>homework-module1</title>
     <meta charset="utf-8">
+    <style>
+        /* Header */
+        header {
+            width: 100%;
+            min-height: 400px;
+            padding-top: 3em;
+        }
+        #home header {
+            background: no-repeat lightgrey url(file:///Users/shinga/Downloads/images%202/cliff_ocean.jpg);
+            background-size: 1500px;
+        }
+        .main-header {
+            background-color:rgb(255, 255, 255, 0.8);
+            width: 700px;
+            margin: 2em auto 0 auto;
+            min-height: 100px;
+            height: 100px;
+        }
+        .main-header .logo img {
+            width: 100px;
+            height: 100px;
+            margin: 0 2em 0 0;
+            float: left;
+        }
+        /* Navigation */
+        .main-menu {
+            margin-left: 227px;
+            font-weight: 400;
+        }
+        .main-menu ul li{
+            list-style-type: none;
+            display: inline-block;
+            float: left;
+            padding-left: 25px;
+            padding-right: 25px;
+            border-left: 1px solid rgba(202, 204, 202, 0.6);
+            line-height: 100px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        .main-menu ul li a{
+            text-decoration: none;
+            color: #888;
+        }
+        .main-menu ul li a:hover {
+            color: #9ed034;
+        }
+        .main-menu ul li.active {
+            background: #9ed034;
+            border: none;
+        }
+        .main-menu ul li.active a {
+            color: #fff;
+        }
+
+        /* Main */
+        .main { font-family: Arial, Helvetica, sans-serif;
+            margin: 80px;
+        }
+
+        /* Partners */
+        section {
+            width: 100%;
+            background-color: #4288c3;
+        }
+        section #partners {
+            width: 1200px;
+            padding: 2em 0 2em 0;
+            margin: 0 auto;
+            text-align: center;
+        }
+        section #partners .partner {
+            display: inline-block;
+            margin: 0 0.75em;
+            padding: 1.3em 1.5em;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+        section #partners .partner img {
+            width: 90px;
+            height: 90px;
+        }
+
+        /* Footer */
+        footer {
+            width: 100%;
+            height: 155px;
+            padding-bottom: 1em;
+            background-color: #ecfab8;
+        }
+    </style>
 </head>
+
+<body id="home">
+
+<div id="container">
 <header>
-    <img src="file:///Users/shinga/Downloads/images%202/cliff_ocean.jpg" alt="Ocean VIew Cliff" width="1280" height="564">
     <div class="main-header">
         <div class="logo">
            <img src="file:///Users/shinga/Downloads/images%202/logo.png" alt="Great Cliffs Logo" width="125">
         </div>
-        <nav class="main-menu">
-    </div>
-<div>
+
+<nav class="main-menu">
     <ul>
-        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="index.html">Home</a></li>
         <li>Cliffs</li>
         <li><a href="activities.html">Activities</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
-        </nav>
-    <h1>Introducing California's Greatest Cliffs</h1>
+ </nav>
+    </div>
+</header>
+</div>
+
+<div class="main">
+    <h1 style="color: #9ed034">Introducing California's Greatest Cliffs</h1>
     <h2>What is so unique about Californa cliffs?</h2>
     <p>California cliffs are one of a kind in the United States where no cliffs are as manificent and beauftiful as them. And California is the only state that have cliffs that fronts all possible environments: sea, river, mountains and canyons. There are four such individual unique cliffs: West Cliff, North Cliff, East Cliff and South Cliff. All offer fantastic overlooking views, recreational areas, camping sites, wildlife watch spots and overnight cabins.</p>
     <h2> Whare are these cliffs?</h2>
     <p>Located within a 100 mile radius from Irvine, California, they can be reached by roads easily. The closest cliff to Irvine is West Cliff, which is the most popular and most visited.</p>
-    
-    <section>
+</div>    
+
+<section>
     <ul id="partners">
-        <li class="partners">
-            <h3>Partner 1 Image</h3>
+        <li class="partner">
+            <img src="partners/partner-bustour.png" alt="Partner Bus Tours">
         </li>
-        <li class="partners">
-            <h3>Partner 2 Image</h3>
+        <li class="partner">
+            <img src="partners/partner-cabinrental.png" alt="Partner Cabin Rental">
         </li>
-        <li class="partners">
-            <h3>Partner 3 Image</h3>
+        <li class="partner">
+            <img src="partners/partner-campingadv.png" alt="Partner Camping Adventure">
         </li>
-        <li class="partners">
-            <h3>Partner 4 Image</h3>
+        <li class="partner">
+            <img src="partners/partner-collegetours.png" alt="Partner College Tours">
         </li>
-        <li class="partners">
-            <h3>Partner 5 Image</h3>
+        <li class="partner">
+            <img src="partners/partner-rentalbike.png" alt="Partner Bike Rentals">
         </li>
-        <li class="partners">
-            <h3>Partner 6 Image</h3>
+        <li class="partner">
+            <img src="partners/partner-tourgroup.png" alt="Partner Tour Group">
         </li>
     </ul>
 </section>
 
-<div id="nondisclaimer">
-    <div class="copy">
-       <footer> &copy copyright 2020 :: GreatCliffs.com</footer>
+<footer>
+    <div id="nondisclaimer">
+        <div class="copy">
+            &copy; Copyright 2020 :: GreatCliffs.com
+        </div>
+        <div class="social">
+            <h3>Facebook Image</h3>
+            <h3>Instagram Image</h3>
+            <h3>Twitter Image</h3>
     </div>
-    <div class="social">
-        <h3>Facebook Image</h3>
-        <h3>Instagram Image</h3>
-        <h3>Twitter Image</h3>
+    <div id="disclaimer">
+        <p>This website is designed and created soley for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
+
     </div>
-</div>
-<div id="disclaimer">
-    <p>This website is designed and created soley for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
-</div>
+</footer>
 </html>
