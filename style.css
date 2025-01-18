@@ -16,6 +16,12 @@ header {
     background: no-repeat lightgrey url(cliff_rock.jpg);
     background-size: 1500px;
 }
+
+#cliffs header {
+    background: no-repeat lightgrey url(file:///Users/shinga/Desktop/WESTCLIFF/homework-module1/forest_cliff.jpg);
+    background-size: 1500px;
+}
+
 .main-header {
     background-color:rgb(255, 255, 255, 0.8);
     width: 700px;
