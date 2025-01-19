@@ -215,3 +215,31 @@ fieldset {
     width: 100px;
     height: 32px;
 }
+
+.cliffs-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; 
+    width: 1000px;
+    margin: 54px auto auto auto;   
+    border: none;
+  }
+  
+  .cliff-card {
+    border: none;
+    background: #fff;
+  }
+  
+  .cliff-title {
+    background-color: #803324; 
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .cliff-card img {
+    display: grid;      
+    width: 100%;   
+  }
