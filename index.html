@@ -161,10 +161,12 @@
  </nav>
     </div>
 </header>
-<section>
+
+<section id="timeofday">
     <span>Your Current Local Time: </span>
     <span id="clock"></span>
 </section>
+
 </div>
 
 <div class="main">
@@ -214,6 +216,7 @@
    
 </footer>
     </div>
+
 <!--JavaScript COdes-->
 <script>
     function currentTime() {
@@ -227,6 +230,7 @@
         //Add 0 to single digits for seconds
         if (sec < 10) {
             sec = "0" + sec;
+
         }
         //add 0 to single digits for minutes
         if (min < 10) {
@@ -242,7 +246,15 @@
         } else {
             ampm = "AM"; //Set to AM
         }
-    }
+        //Assemble time format to display
+        var time = hr + ":" + min + ":" + sec + " " + ampm;
+
+         //Display current local time and time zone on HTML elements
+         document.getElementById("clock").innerText = time; //adding time
+        }
+        //Initial run of time data function
+        currentTime();
+       
 </script>
 
 </html>
