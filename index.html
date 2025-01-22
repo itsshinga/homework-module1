@@ -230,8 +230,8 @@
         //Add 0 to single digits for seconds
         if (sec < 10) {
             sec = "0" + sec;
-
         }
+
         //add 0 to single digits for minutes
         if (min < 10) {
             min = "0" + min;
@@ -246,15 +246,41 @@
         } else {
             ampm = "AM"; //Set to AM
         }
+
+        var utchr = d.getUTCHours();
+        var timeDiff = localHr24 - utchr;
+        var adjTimeDiff = Math.abs(timeDiff);
+        var timeZone;
+            if (adjTimeDiff === 8) {
+                timeZone = "PT";
+            } else if (adjTimeDiff === 7) {
+                timeZone = "MT";
+            } else if (adjTimeDiff === 6) {
+                timeZone = "CT";
+            } else if (adjTimeDiff === 5) {
+                timeZone = "ET";
+            } else {
+                timeZone = "??";
+            
+
         //Assemble time format to display
         var time = hr + ":" + min + ":" + sec + " " + ampm;
 
          //Display current local time and time zone on HTML elements
          document.getElementById("clock").innerText = time; //adding time
+
         }
-        //Initial run of time data function
-        currentTime();
-       
+        //Run time data function every 1 second
+        setInterval(currentTime, 1000); //setting timer
+
+    
+    }
+
 </script>
 
 </html>
+
+var utch = d.getUTCHours();
+var timeDiff;
+var adjTimeDiff;
+var timeZone;

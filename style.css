@@ -243,3 +243,19 @@ fieldset {
     display: grid;      
     width: 100%;
   }
+  
+ #timeofday {
+    text-align: center;
+    font-family:  Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #3a3a3a;
+    background: linear-gradient(
+    0deg,
+    rgba(251, 215, 139, 1) 0%,
+    rgba(118, 213, 245, 1) 100%
+  );
+ }
+ #clock {
+    color:#125688
+ }
