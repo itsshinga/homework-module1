@@ -179,7 +179,7 @@
 
 <section>
     <ul id="partners">
-        <li class="partner">
+       <!---- <li class="partner">
             <img src="partners/partner-bustour.png" alt="Partner Bus Tours">
         </li>
         <li class="partner">
@@ -196,7 +196,7 @@
         </li>
         <li class="partner">
             <img src="partners/partner-tourgroup.png" alt="Partner Tour Group">
-        </li>
+        </li>-->
     </ul>
 </section>
 
@@ -246,21 +246,6 @@
         } else {
             ampm = "AM"; //Set to AM
         }
-
-        var utchr = d.getUTCHours();
-        var timeDiff = localHr24 - utchr;
-        var adjTimeDiff = Math.abs(timeDiff);
-        var timeZone;
-            if (adjTimeDiff === 8) {
-                timeZone = "PT";
-            } else if (adjTimeDiff === 7) {
-                timeZone = "MT";
-            } else if (adjTimeDiff === 6) {
-                timeZone = "CT";
-            } else if (adjTimeDiff === 5) {
-                timeZone = "ET";
-            } else {
-                timeZone = "??";
             
 
         //Assemble time format to display
@@ -273,8 +258,12 @@
         //Run time data function every 1 second
         setInterval(currentTime, 1000); //setting timer
 
+        var utchr = d.getUTCHours();
+        var timeDiff;
+        var adjTimeDiff;
+        var timeZone;
     
-    }
+
 
 </script>
 
