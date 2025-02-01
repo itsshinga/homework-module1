@@ -207,8 +207,8 @@ fieldset {
     text-align: center;
 }
 
-.button input[type="submit"] {
-    background-color: #007BFF;
+form .button input[type="submit"] {
+    /*background-color: #4977D1;*/
     color: white;
     cursor: pointer;
     border: none;
@@ -259,3 +259,4 @@ fieldset {
  #clock {
     color:#125688
  }
+
