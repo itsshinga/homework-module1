@@ -260,3 +260,16 @@ form .button input[type="submit"] {
     color:#125688
  }
 
+
+ .selected {
+    background-color: #9ed034;
+    font-weight: bold;
+    color: white; /* Change font color to white */
+}
+
+/* Prevent selection on "Not Available" cells */
+td:contains("Not Available") {
+    background-color: lightgray;
+    cursor: default;
+    pointer-events: none;
+}
