@@ -6,21 +6,33 @@ header {
     min-height: 275px;
 }
 #home header {
-    background: no-repeat lightgrey url(cliff_ocean.jpg);
-    background-size: 100% 400px;
+    width: 100%;
+    min-height: 400px;
+    background: lightgrey url("cliff_ocean.jpg") no-repeat center center;
+    background-size: cover; /* Makes the background image responsive */
+    position: relative;
 }
 #activities header {
-    background: no-repeat lightgrey url(runfly.jpg);
-    background-size: 100% 400px;
+    width: 100%;
+    min-height: 400px;
+    background: lightgrey url("runfly.jpg") no-repeat center center;
+    background-size: cover; /* Makes the background image responsive */
+    position: relative;
 }
 #contact header {
-    background: no-repeat lightgrey url(cliff_rock.jpg);
-    background-size: 100% 400px;
+    width: 100%;
+    min-height: 400px;
+    background: lightgrey url("cliff_rock.jpg") no-repeat center center;
+    background-size: cover; /* Ensures the image resizes responsively */
+    position: relative;
 }
 
 #cliffs header {
-    background: no-repeat lightgrey url(forest_cliff.jpg);
-    background-size: 100% 400px;
+    width: 100%;
+    min-height: 400px;
+    background: lightgrey url("forest_cliff.jpg") no-repeat center center;
+    background-size: cover; /* Makes the image responsive */
+    position: relative;
 }
 
 @media (min-width: 1024px) {.main-header {
@@ -223,25 +235,32 @@ td:first-child {
     background: #BDE1FF;
 }
 
+/* General Styles */
 select {
-    padding-left: 28px;
-    padding-right: 28px;
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
 }
 
 form {
     margin-bottom: 80px;
     margin-top: 20px;
+    
 }
 
 legend {
     font-weight: bold;
     color: #4288c3;
 }
+
 fieldset {
-    border-color: #ecfab8;
-    padding: 28px;
+    border: 4px solid #ecfab8 !important;
+    padding: 20px !important;
+    width: 100%;
+    box-sizing: border-box;
 }
-.commentbox{
+
+.commentbox {
     margin-bottom: 20px;
 }
 
@@ -249,13 +268,45 @@ fieldset {
     text-align: center;
 }
 
-form .button input[type="submit"] {
-    
+form .button button {
     color: white;
     cursor: pointer;
     border: none;
     width: 100px;
     height: 32px;
+    background-color: #4288c3;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .textbox input,
+    .commentbox textarea,
+    .randomcode input {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .selectmenu select {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .radios label,
+    .selectmenu label,
+    .commentbox label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .radios input[type="radio"] {
+        margin-right: 8px;
+    }
+
+    .commentbox textarea {
+        rows: 6;
+    }
 }
 
 .cliffs-container {
@@ -491,4 +542,20 @@ td.selected {
 }
 
 
+@media (max-width: 768px) {
+    fieldset {
+        padding: 15px !important;
+        border-width: 2px;
+    }
 
+    /* Reduce text area height on smaller screens */
+    .commentbox textarea {
+        height: 140px;
+    }
+
+    /* Ensure button is properly aligned */
+    .button button {
+        font-size: 14px;
+        max-width: 180px;
+    }
+}
