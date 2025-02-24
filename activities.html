@@ -12,6 +12,14 @@
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- jQuery (Required for Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS (Ensure this is after jQuery) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
 </head>
 <div class="main-header">
     <div class="logo">
@@ -49,6 +57,7 @@
 
 <h1 style="color: #9ed034;">Activities</h1>
    <p>There are many planned activities at all the cliff sites. Some are scheduled daily, weekly, monthly and yearly. These activities are not however run by the state park and recreational department. They are operated and manage by private vendors but are partners with the state department. Therefore, for schedule inquiries or information, please contact them directly. For a list of activities, please refer to the table below:</p>
+<div class="table-container">
    <table>
     <thead style="text-align: center">
         <th colspan="5" class="table-caption">Activities at the Cliffs</th>
@@ -100,8 +109,9 @@
         </tr>
     </tbody>
 </table>
+</div>
 
-<!-- Display Box for Selected Activities -->
+<!-- Display Box for Selected Activities 
 <div id="displaySelected">
     <div id="result">
         <h4>My selected activities to enquire:</h4>
@@ -110,7 +120,27 @@
         <input type="email" placeholder="johndoe@gmail.com">
         <button>Get Info</button>
     </div>
+</div> -->
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="activityModal" tabindex="-1" aria-labelledby="activityModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="activityModalLabel">My selected activities to enquire:</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modalActivities">
+                <!-- Selected activities will appear here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Back to Activities</button>
+                <button type="button" class="btn btn-primary">Get Info</button>
+            </div>
+        </div>
+    </div>
 </div>
+
 
    <section>
     <ul id="partners">
@@ -161,7 +191,11 @@
 
 <!-- jQuery, Popper.js, and Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+
+
 
 </html>

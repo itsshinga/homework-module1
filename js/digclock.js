@@ -55,3 +55,5 @@ function currentTime() {
 
   // Update every second
   setInterval(currentTime, 1000);
+
+  $("#activityModal").modal("show"); // Open Bootstrap modal

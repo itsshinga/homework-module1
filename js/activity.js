@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // only selectable cells
+    // Make only selectable cells clickable (excluding 'Not Available')
     $("td").not(":contains('Not Available')").css("cursor", "pointer");
 
     // Click event for table cells
@@ -12,25 +12,26 @@ $(document).ready(function () {
         let activityKey = `${activity} at ${siteName}`; 
 
         if ($(this).hasClass("tdhighlight")) {
-            // If selected, append the activity with site name to the display box
-            if ($("#result p[data-activity='" + activityKey + "']").length === 0) {
-                $("#result").append(`<p data-activity="${activityKey}">${activity} at <span class="site">${siteName}</span></p>`);
+            // If selected, add activity to modal if not already present
+            if ($("#modalActivities p[data-activity='" + activityKey + "']").length === 0) {
+                $("#modalActivities").append(`<p data-activity="${activityKey}">${activity} at <span class="site">${siteName}</span></p>`);
             }
-            $("#displaySelected").css("visibility", "visible"); // Show box
         } else {
-            // If deselected, remove
-            $("#result p[data-activity='" + activityKey + "']").remove();
+            // If deselected, remove activity from modal
+            $("#modalActivities p[data-activity='" + activityKey + "']").remove();
+        }
 
-            // Hide display box if empty
-            if ($("#result p").length === 0) {
-                $("#displaySelected").css("visibility", "hidden");
-            }
+        // If no selected activities remain, hide modal when triggered
+        if ($("#modalActivities p").length === 0) {
+            $("#activityModal").modal("hide");
+        } else {
+            $("#activityModal").modal("show"); // Show modal when there are selected activities
         }
     });
 });
 
 $(document).ready(function () {
-    $("td").not(":contains('Not Available')").on("click", function () {
-        $(this).toggleClass("selected");
+    $("#closeModal").on("click", function () {
+        $("#activityModal").modal("hide"); // Manually close the modal
     });
 });

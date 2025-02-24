@@ -150,10 +150,10 @@ section #partners .partner img {
 
 /* Footer */
 footer {
-    width: 100%;
-    height: 155px;
-    padding-bottom: 1em;
-    background-color: #ecfab8;
+    width: 100% !important;
+    height: 155px !important;
+    padding-bottom: 1em !important;
+    background-color: #ecfab8 !important;
 }
 footer #nondisclaimer .copy {
     padding: 3.5em 3.5em 3.5em 13em;
@@ -198,13 +198,19 @@ footer #nondisclaimer .social .fa-instagram {
 }
 
 /* Activities */
+.table-container {
+    width: 100% !important;
+    overflow-x: auto !important;
+    margin-bottom: 80px; /* Add margin for spacing */
+}
+
 table {
     width: 1000px;
     margin: 4em auto 0 auto;
     margin-bottom: 80px;
 }
 caption {
-    background: #852B1B;
+    background: #852B1B !important;
     height: 40px;
     color: #fff;
     font-size: 1.3em;
@@ -235,7 +241,7 @@ td:first-child {
     background: #BDE1FF;
 }
 
-/* General Styles */
+/* Contact */
 select {
     padding: 8px;
     width: 100%;
